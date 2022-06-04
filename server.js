@@ -1,12 +1,10 @@
 const express = require('express')
 const app = express()
+app.set("view engine", "ejs")
 const data = require("./data")
 
-app.set("view engine", "ejs")
-
-
 app.get('/', function(req, res){
-    res.render('index', {name:"lawal"})
+    res.render('index', data[2])
 })
 
 
