@@ -1,10 +1,15 @@
 const express = require('express')
 const app = express()
+const data = require("./data")
+
+app.set("view engine", "ejs")
 
 
 app.get('/', function(req, res){
-    res.send("Hello world New files")
+    res.render('index', {name:"lawal"})
 })
+
+
 
 
 
