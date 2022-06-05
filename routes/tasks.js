@@ -9,4 +9,9 @@ router.get('/new', (req, res)=>{
     res.send("NEW TASKS")
 })
 
+router.get('/new/:userID', (req, res)=>{
+        res.send("THIS IS USER NUMBER " + req.params.userID)
+})
+
 module.exports = router
+

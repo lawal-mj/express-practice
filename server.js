@@ -18,3 +18,7 @@ app.get('/', function(req, res){
 
 
 app.listen(3000)
+
+// route_path: '/user/:userId/book/:bookId'
+// actual_request_URL: '/user/546/book/6754'
+// req.params: {userId: '546', bookId: '6754'}
