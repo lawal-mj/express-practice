@@ -1,26 +1,17 @@
-const express = require('express')
+const express = require('express');
 const app = express()
-app.set("view engine", "ejs")
+const path = require('path')
 
-app.use(express.static("public"))
+app.use(express.static('public'))
 
-
-// const taskRouter = require('./routes/tasks')
-// const userRouter = require('./routes/users')
-
-// app.use('/tasks', taskRouter)
-// app.use('/users', userRouter)
-
-
-// // home route 
-// app.get('/', function(req, res){
-//     res.render('index')
-// })
-
-app.get('/pages', (req, res)=>{
-    res.sendFile('pages.html')
+app.get('/', function(req, res){
+    res.send("This is the home route")
 })
 
 
-app.listen(3000)
 
+
+
+app.listen(3000, ()=>{
+    console.log("Server started")
+})
